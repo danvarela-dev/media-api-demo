@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit {
 
   getVideoUrls(): void {
     this.videoUrls = JSON.parse(
-      localStorage.getItem('videoUrls') || '[]'
+      sessionStorage.getItem('videoUrls') || '[]'
     ) as string[];
   }
 
