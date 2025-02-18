@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background: #f6f6f6;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.custom-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin: 8px;
+  min-width: 130px;
+  font-size: 15px;
+  gap: 4px;
+  min-height: 48px;
+
+  &:not(&:disabled):hover {
+    cursor: pointer;
+    background: darken(#f0f0f0, 5%);
+  }
+}
