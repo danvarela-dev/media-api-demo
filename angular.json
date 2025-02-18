@@ -24,10 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/_redirects",
               {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
+                "glob": "**/*",
+                "input": "public"
               }
             ],
             "styles": ["src/styles.scss"],
