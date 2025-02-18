@@ -1,0 +1,35 @@
+@let recording = isRecording();
+
+<div class="canvas">
+  <div class="canvas__controls">
+    <button
+      [disabled]="recording"
+      type="button"
+      class="custom-btn"
+      (click)="startRecording()"
+    >
+      <span>Record Screen</span>
+      <i class="fa-solid fa-video"></i>
+    </button>
+    <button
+      [disabled]="!recording"
+      type="button"
+      class="custom-btn"
+      (click)="stopRecording()"
+    >
+      <span>Stop Recording</span>
+      <i class="fa-solid fa-stop"></i>
+    </button>
+
+    <button type="link" class="custom-btn" [routerLink]="'/gallery'">
+      <span>Gallery</span>
+      <i class="fa-solid fa-film"></i>
+    </button>
+  </div>
+
+  <div class="canvas__live-video">
+    <app-camera></app-camera>
+  </div>
+
+  <app-whiteboard></app-whiteboard>
+</div>

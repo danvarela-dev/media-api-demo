@@ -1,0 +1,40 @@
+.gallery {
+  padding: 16px;
+
+  &__header {
+    display: flex;
+  }
+
+  &__video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px 16px 0 16px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      margin: 8px 8px 16px 8px;
+      font-size: 15px;
+      gap: 4px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}

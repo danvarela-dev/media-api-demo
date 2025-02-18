@@ -1,0 +1,28 @@
+<div class="gallery">
+  <div class="gallery__links">
+    <button class="custom-btn" routerLink="/home">
+      <i class="fa-solid fa-left-long"></i>
+      <span>Regresar</span>
+    </button>
+  </div>
+  <div class="gallery__header">
+    <h2>Gallery</h2>
+  </div>
+
+  <div class="gallery__items">
+    @for (url of videoUrls; track $index; let first = $first) {
+    <div class="gallery__video-container">
+      <video
+        controls
+        [src]="url"
+        width="350"
+        height="auto"
+        [autoplay]="first"
+      ></video>
+      <button (click)="downloadVideo(url)">
+        <i class="fa-solid fa-download"></i>
+      </button>
+    </div>
+    }
+  </div>
+</div>

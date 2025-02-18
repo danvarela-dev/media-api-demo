@@ -1,0 +1,18 @@
+<div class="whiteboard">
+  <div class="whiteboard__controls-wrap">
+    <div class="whiteboard__controls">
+      <i (click)="toggleDrawing()" class="fa-solid fa-pencil"></i>
+      <i (click)="clearCanvas()" class="fa-solid fa-trash"></i>
+    </div>
+  </div>
+  <canvas
+    #canvas
+    [class.drawing-mode]="isDrawingModeOn"
+    class="whiteboard__canvas"
+    (mousedown)="startDrawing($event)"
+    (mousemove)="draw($event)"
+    (mouseup)="stopDrawing()"
+    (mouseleave)="stopDrawing()"
+  >
+  </canvas>
+</div>

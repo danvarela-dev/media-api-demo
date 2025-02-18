@@ -1,0 +1,39 @@
+.canvas {
+  box-sizing: border-box;
+  height: 98dvh;
+  position: relative;
+
+
+
+  &__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    font-size: 24px;
+    z-index: 999;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  &__live-video {
+    position: absolute;
+    border: none;
+    right: 0;
+    top: 0;
+  }
+
+  app-camera {
+    position: absolute;
+    right: 0;
+    top: 8%;
+    z-index: 999;
+  }
+}
